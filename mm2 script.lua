@@ -99,15 +99,13 @@ local Window = Rayfield:CreateWindow({
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end,
  })
-local UserInputService = game:GetService("Destroy GUI")
-local guiVisible = true
-
-UserInputService.InputBegan:Connect(function(input, gameProcessed)
-    if not gameProcessed and input.KeyCode == Enum.KeyCode.RightControl then
-        guiVisible = not guiVisible
-        Rayfield.Enabled = guiVisible
-    end
-end)
+ local Section = PlayerTab:CreateSection("Destroy GUI")
+ local Button = PlayerTab:CreateButton({
+	Name = "Destroy GUI",
+	Callback = function()
+		Rayfield:Destroy()
+	end,
+ })
  local TeleportTab = Window:CreateTab("Teleport", 6723742952)
  local Section = TeleportTab:CreateSection("Autofarm")
  local Button = TeleportTab:CreateButton({
@@ -1133,7 +1131,7 @@ w})
 
 		-- > Functions <--
 
-		function CreateHighlight() -- make any new highlights for new players
+		function CreateHighlight()
 			for i, v in pairs(Players:GetChildren()) do
 				if v ~= LP and v.Character and not v.Character:FindFirstChild("Highlight") then
 					Instance.new("Highlight", v.Character)           
@@ -1189,9 +1187,7 @@ w})
 		end)
 	end,
  })
- -- Секция Visual
  local Section = VisualTab:CreateSection("Visual")
- -- sprint trail
  local Button = VisualTab:CreateButton({
 	Name = "Sprint Trail",
 	Callback = function()
