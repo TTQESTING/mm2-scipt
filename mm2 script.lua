@@ -1021,13 +1021,12 @@ w})
 		end
 	end,
  })
- -- кнопка backflip
  local Button = CombatTab:CreateButton({
-	Name = "Flips [FE with normal inf jump]",
+	Name = "Flips",
 	Callback = function()
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "TT_QESTING Hub";
-			Text = " FrontflipKey = Z , BackflipKey = X , Inf jump = C";
+			Text = " FrontflipKey = Z , BackflipKey = X ;
 			Icon = "http://www.roblox.com/asset/?id=15076243399";
 			Duration = 3;
 			Button1 = "Ok"
@@ -1042,9 +1041,7 @@ w})
 		loadstring(game:HttpGet('https://pastebin.com/raw/CWn3dvTV'))()
 	end,
  })
- -- секция фек дай
  local Section = CombatTab:CreateSection("Fake Die")
- -- кнопка lay on back
  local Button = CombatTab:CreateButton({
 	Name = "Lay On Back",
 	Callback = function()
