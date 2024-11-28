@@ -74,17 +74,6 @@ local Window = Rayfield:CreateWindow({
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
     end,
  })
- local Slider = PlayerTab:CreateSlider({
-    Name = "JumpPower",
-    Range = {50, 500},
-    Increment = 10,
-    Suffix = "JumpPower",
-    CurrentValue = 10,
-    Flag = "Slider1",
-    Callback = function(v)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
-    end,
- })
  local Section = PlayerTab:CreateSection("Destroy GUI Press 'K'")
  local Button = PlayerTab:CreateButton({
 	Name = "Destroy GUI Press 'K'",
