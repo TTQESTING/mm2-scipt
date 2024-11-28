@@ -85,9 +85,9 @@ local Window = Rayfield:CreateWindow({
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end,
  })
- local Section = PlayerTab:CreateSection("Destroy GUI Press K")
+ local Section = PlayerTab:CreateSection("Destroy GUI Press 'K'")
  local Button = PlayerTab:CreateButton({
-	Name = "Destroy GUI",
+	Name = "Destroy GUI Press 'K'",
 	Callback = function()
 		Rayfield:Destroy()
 	end,
