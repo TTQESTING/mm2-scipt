@@ -49,20 +49,6 @@ local Window = Rayfield:CreateWindow({
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end,
  })
- local Button = PlayerTab:CreateButton({
-	Name = "Dex Explorer",
-	Callback = function()
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "TT_QESTING Hub";
-			Text = "DEX explorer Loaded";
-			Icon = "http://www.roblox.com/asset/?id=15076243399";
-			Duration = 10;
-			Button1 = "Yes";
-			Button2 = "No";
-		})
-		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
-	end,
- })
  local Slider = PlayerTab:CreateSlider({
     Name = "Walkspeed",
     Range = {16, 250},
@@ -235,15 +221,13 @@ local Button = TeleportTab:CreateButton({
 
 	end,
  })
- -- teleport to lobby
  local Button = TeleportTab:CreateButton({
 	Name = "Teleport to Lobby",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108.5, 145, 0.6)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108.5, 160, 0.6)
 	end,
  })
  	
- -- кнопка телепорт to мурдер
  local Button = TeleportTab:CreateButton({
     Name = "Teleport to Murder",
     Callback = function()
