@@ -63,20 +63,6 @@ local Window = Rayfield:CreateWindow({
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
 	end,
  })
- local Section = PlayerTab:CreateSection("Character")
- local Toggle = PlayerTab:CreateToggle({
-	Name = "Inf Jump [DONT USE]",
-	CurrentValue = false,
-	Flag = "Toggle1",
-	Callback = function(InfiniteJumpEnabled)
-        local InfiniteJumpEnabled = true
-        game:GetService("UserInputService").JumpRequest:connect(function()
-            if InfiniteJumpEnabled then
-                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-            end
-        end)
-    end,
- })
  local Slider = PlayerTab:CreateSlider({
     Name = "Walkspeed",
     Range = {16, 250},
